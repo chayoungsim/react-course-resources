@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import axios from "axios";
 import axiosInstance from "../api/axiosInstance";
 
-export function useAxios(url, options={}) {
+export function useAxios(url, options = {}) {
     const [data, setData] = useState(null);
     const [loading, setLoading] = useState(false);
     const [error, setError] = useState(null);
@@ -13,28 +13,28 @@ export function useAxios(url, options={}) {
     useEffect(() => {
         if (!url) return;
 
-        const controller = new AbortController()
-        setLoading(true)
-        setError(null)
+        const controller = new AbortController();
+        setLoading(true);
+        setError(null);
 
-      axiosInstance({url, signal: controller.signal, ...options})
-        .then(res => setData(res.data))
-        .catch(err => {
-            if(axios.isCancel(err)) return
-            setError(err.response
-            ? `${err.response.status}: ${err.response.data?.message || err.message}`
-            : err.message
-            )
-        })
-        .finally(() => {
-            setLoading(false)
-        })
+        axiosInstance({ url, signal: controller.signal, ...options })
+            .then((res) => setData(res.data))
+            .catch((err) => {
+                if (axios.isCancel(err)) return;
+                setError(
+                    err.response
+                        ? `${err.response.status}: ${err.response.data?.message || err.message}`
+                        : err.message,
+                );
+            })
+            .finally(() => {
+                setLoading(false);
+            });
 
         return () => {
-            controller.abort()
-        }  
-
+            controller.abort();
+        };
     }, [url, trigger]);
 
-    return { data, loading, error, refetch };
+    return { data, loading, error, refetch, setData };
 }

@@ -1,0 +1,36 @@
+import Link from "next/link";
+import Image from "next/image";
+
+import classes from "./meal-item.module.css";
+
+type MealItemProps = {
+    id: string; // key prop을 위해 추가
+    title: string;
+    slug: string;
+    image: string;
+    summary: string;
+    creator: string;
+};
+
+export default function MealItem({ title, slug, image, summary, creator }: MealItemProps) {
+    return (
+        <article className={classes.meal}>
+            <header>
+                <div className={classes.image}>
+                    {/* image prop이 유효한 문자열인지 확인 후 Image 컴포넌트를 렌더링합니다. */}
+                    {image && <Image src={image} alt={title} fill />}
+                </div>
+                <div className={classes.headerText}>
+                    <h2>{title}</h2>
+                    <p>by {creator}</p>
+                </div>
+            </header>
+            <div className={classes.content}>
+                <p className={classes.summary}>{summary}</p>
+                <div className={classes.actions}>
+                    <Link href={`/meals/${slug}`}>View Details</Link>
+                </div>
+            </div>
+        </article>
+    );
+}
