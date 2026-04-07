@@ -1,0 +1,136 @@
+
+.img-attach {
+    width: 100%;
+    height: 324px;
+    position: relative;
+    background: url(../../assets/images/calltoaction.jpg) no-repeat center;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+
+
+.icon-circled-arrow {
+    width: 6.4rem;
+    height: 6.4rem;    
+    .arrow {
+        transform: translate(0);
+        transition: all .3s cubic-bezier(.15,0,0,1);
+        fill:#222;
+    }
+    .circle-start,
+    .circle-end {
+        fill:#222;
+        transition: opacity .3s cubic-bezier(.15,0,0,1),visibility .3s cubic-bezier(.15,0,0,1)
+    }
+    .circle-end {
+        visibility: none
+    }
+  &:hover {
+    .arrow {
+        transform: translate(9px)
+    }
+    .circle-start {
+        opacity: 0;
+        visibility: none
+    }
+    .circle-end {
+        visibility: visible
+    }
+  }
+}
+
+
+.contact-us {
+    height: 50rem;    
+    overflow: hidden;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: height 0.25s linear, margin 0.25s linear, padding 0.25s linear;
+    background: #000;  
+    &-bg {
+        position: absolute;         
+        top : 50%;
+        transform: translateY(-50%);             
+    }
+    &-text {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        gap: 2rem;
+        p {
+            font-size: 4rem;
+            color:#fff;
+            text-align: center;
+        }
+    }
+}
+
+
+
+
+
+/*sub*/
+.sub-visual {
+    align-items: center;
+    background-size: cover;
+    display: flex;
+    height: 90vh;
+    justify-content: center;
+    overflow: hidden;
+    position: relative;
+    z-index: 10;
+    .sub-visual-vs {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        position: relative;
+        clip-path: inset(10% 15% round 4rem);
+        transition: clip-path 0.3s;
+        transition-timing-function: cubic-bezier(0.2, 0, 0.41, 1);
+    }
+    &.fullScreen {
+        .sub-visual-vs {
+           clip-path: inset(0); 
+        }
+    }
+}
+
+.products-section {
+    padding:10rem;
+}
+.product-grid {
+    display: grid;
+    grid-template-columns:repeat(3, 1fr);
+    gap:4rem;
+}
+
+.product-item {
+    a {
+        display: block;
+        width: 100%;
+        height: 100%;
+        
+    }
+}
+.product-thumb {
+    width: 100%;
+    aspect-ratio: 1; /* 정사각형 비율 유지 */
+    overflow: hidden;
+    position: relative;
+    img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+}
+
+.alone {
+    width:30rem;
+}

@@ -1,0 +1,293 @@
+
+@use "../abstracts" as *;
+
+body {
+  font-family: $font-family-base;
+  font-size: $font-size-sm;
+  line-height: $line-height-base;
+}
+
+h1 {
+  font-size: $font-size-3xl;
+  font-weight: $font-weight-bold;
+  line-height: $line-height-tight;
+}
+
+h2 {
+  font-size: $font-size-2xl;
+  font-weight: $font-weight-bold;
+}
+
+h3 {
+  font-size: $font-size-xl;
+}
+
+#wrap {
+    width: 100%;
+    min-height: 100vh;
+    max-width: 2560px;
+    margin:0 auto;
+
+}
+
+.contents {
+    height: 100%;
+    
+    padding-top:6rem;
+
+    @include respond("lg") {
+        padding-top:10rem;
+    }
+}
+
+.static {
+    width: 100%;
+    max-width: 1280px;
+    height: 100%;
+    margin: 0 auto;
+    padding: 0 2rem;    
+}
+
+.video-frame {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    video {
+        position: absolute;
+        inset: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        z-index: 0;
+    }
+}
+
+.image-frame {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+}
+
+html, body {
+    &::-webkit-scrollbar{
+        width: 6px;
+        height: 6px;
+        background-color: #ececec;
+        appearance: none;
+    }
+    &::-webkit-scrollbar-thumb {
+        background-color:#898989;
+        border-radius: 4px;
+    }
+    &::-webkit-scrollbar-track {
+        background-color: #ececec;
+    }
+}
+
+.notScroll {
+    overflow: hidden;
+    width: 100%;
+    height: 100vh;   
+    // body {       
+    //     position: fixed;
+    //     width: 100%;
+    // } 
+}
+
+
+.hamburger {
+    display: block;
+    width: 4rem;
+    height: 4rem;    
+    border: none;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;    
+    transition: all 0.3s ease;
+    z-index: 101;
+    backdrop-filter: blur(8px);
+    background-color: transparent;    
+    span {
+        position: absolute;
+        left: 50%;
+        width: 70%;
+        height: 5.45%;
+        background: #222;
+        border-radius: 3px;
+        transition: all 0.3s ease;
+        &:nth-child(1) {
+            top: 29.09%;
+            transform: translateX(-50%);
+        }
+        &:nth-child(2) {
+            top: 47.27%;
+            transform: translateX(-50%);
+            width: 60%;
+        }
+        &:nth-child(3) {
+            top: 65.45%;
+            transform: translateX(-50%);
+        }
+    }
+    &.active {
+        z-index: 200;
+        span {
+            background: #222;
+            &:nth-child(1) {
+                top: 47.27%;
+                width: 70%;
+                transform: translateX(-50%) rotate(45deg);
+            }
+            &:nth-child(2) {
+                opacity: 0;
+                transform: translateX(-50%) translateX(20px);
+            }
+            &:nth-child(3) {
+                top: 47.27%;
+                width: 70%;
+                transform: translateX(-50%) rotate(-45deg);
+            }
+        }
+    }
+}
+
+.home {
+    .hamburger {
+        span {
+            background: #fff;
+        }
+        &.active{
+            span {
+                background: #222;
+            }
+        }
+    }
+}
+.up, 
+.showGnb {
+    .hamburger {
+        span {
+            background: #222;
+        }
+    }
+}
+
+
+
+
+
+// 예시 SCSS 스타일
+.text-grd {
+  position: relative; // 가상 요소를 위치시키기 위해 position: relative를 설정합니다.  
+  font-size:10rem;
+  // 실제 텍스트(<span>)는 그라데이션으로 채웁니다.
+  span {
+    background: linear-gradient(90deg, #0072C6 0%, #009A93 100%);
+ // 원하는 그라데이션 색상
+    -webkit-background-clip: text; // 텍스트 모양으로 배경을 클리핑합니다.
+    background-clip: text;
+    color: transparent; // 텍스트 색상은 투명하게 처리합니다.
+    clip-path: polygon(0 100%, 100% 100%, 100% 100%, 0 100%);
+    transition: clip-path 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);    
+  }
+
+  // data-text 값을 가져와서 가상 요소를 만듭니다.
+  &::before {
+    content: attr(data-text); // data-text 속성의 값을 가져옵니다.
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: -1; // 실제 텍스트보다 뒤에 위치시킵니다.
+
+    // 가상 요소 스타일 (예: 텍스트 외곽선 효과)
+    //-webkit-text-stroke: 1px #333; // 외곽선(stroke)을 줍니다.
+    color: #dfdfdf; // 외곽선 안쪽을 채울 색상
+  }
+
+  &:hover {
+    span{
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+        transition: clip-path 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+
+    }
+  }
+}
+
+
+
+
+.text-trans {
+    position: relative;
+    overflow: hidden;
+    transition: all 0.5s;
+    padding: 0;
+    font-size: 1.8rem;
+    span,
+    &:after {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 3rem;
+        transition: .3s ease-in-out;
+        font-weight: 600;
+    }
+    span { 
+        color:#222;        
+    }
+    &::after {
+       content: attr(data-trans);       
+       position: absolute; 
+       top: 100%; 
+       left: 0; 
+       color:#000;
+    }
+    &.active,
+    &:focus,
+    &:hover {
+             
+        span {
+            transform: translateY(-100%);  
+        }
+        &:after {
+            top: 0; 
+            color: $primary;
+        }
+    }
+}
+
+
+.btn-trans{
+    position: relative;
+    overflow: hidden;
+    transition: color 0.4s ease;
+    &::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 0;
+        height: 100%;
+        background: #333;
+        transition: width 0.3s ease;
+        z-index: 0;
+    }
+    &:hover {
+        color:#fff;
+        span {
+           position: relative;
+           z-index: 1;
+        }
+        &::before {
+            width: 100%;
+        }
+    }
+}

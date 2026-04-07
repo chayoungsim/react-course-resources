@@ -1,0 +1,8 @@
+{
+  "permissions": {
+    "allow": [
+      "Read(//c/Learn/react-course-resources/00 Project/my-react-axios/**)",
+      "Bash(npm install:*)"
+    ]
+  }
+}

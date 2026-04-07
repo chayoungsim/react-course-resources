@@ -1,0 +1,222 @@
+@use '../../styles/abstracts/breakpoints' as *;
+
+$sub-menu-height: 30rem;
+
+.header {
+    position: fixed;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    max-width: 2560px;
+    height: 6rem;
+    z-index: 100;
+    will-change: transform;
+    transition: background-color 0.3s ease;
+    background-color: transparent;
+
+    @include respond("lg") {
+        height: 10rem;
+    }
+
+    // 스크롤 올릴 때
+    &:global(.up) {
+        background-color: rgba(255, 255, 255, 0.9);
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    }
+}
+
+.siteHeader {
+    height: 100%;   
+    &::before {
+        content: '';
+        position: absolute;
+        top:0;
+        left:0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(255,255,255,0.9);
+        opacity: 0;
+        z-index:-1;
+        transition: height 200ms ease-out, opacity 200ms;
+        transition-delay: 0ms, 100ms;       
+    }
+}
+
+
+
+.logo {
+    position: relative;
+    width: 96px;
+    height: 60px;
+    z-index: 2;
+    a{
+        display: block;
+        width: 100%;
+        height: 100%;
+    }
+    img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+}
+
+
+
+.static {
+    width: 100%;
+    max-width: 1280px;
+    height: 100%;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.gnbGroup {
+    position: absolute;
+    top:0;
+    left:0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    
+    justify-content: center;
+    display: none;
+    @include respond("lg") {
+        display: flex;
+    }
+}
+.gnbList{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap : 0;
+    transition: all 0.5s;
+    > li {
+        text-align: center;
+        > a, 
+        > button {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 10rem;
+        }
+        ul {
+            opacity: 0;
+            transition: opacity 200ms ease-out;
+            transition-delay: 100ms;
+            li {
+                margin-top: 1rem;
+                a {
+                    font-size: 1.6rem;
+                    &:hover {
+                        color: #007ac9;
+                    }
+                }
+            }
+        }
+    }
+    a {
+        transition: color 100ms;
+    }
+}
+.gnbLink {
+    font-size: 1.8rem;
+    color: transparent;
+    font-weight: 200;
+    position: relative;
+    color: #222;
+    &::after {
+        content: '';
+        display: block;
+        height: 2px;
+        position: absolute;
+        left: 0;
+        bottom: 1rem;
+        transform: scaleX(0);
+        transform-origin: right center;
+        width: 100%;
+        transition: transform 0.55s cubic-bezier(0.2, 0, 0.41, 1);
+        background-color: #222;
+    }
+    &:hover {
+        &::after {
+            transform: scaleX(1);
+            transform-origin: left center;
+        }
+
+    }
+    &.activeMenu {
+        &::after {
+            transform: scaleX(1);
+            transform-origin: center;
+        }
+    }
+}
+
+:global(.showGnb) {
+    .siteHeader {
+        &::before {
+            height: $sub-menu-height;
+            opacity: 1;
+            border-radius: 0;
+            box-shadow: 0 0 3px rgba(0, 0, 0, 0.2);
+        }
+    }
+    
+    .gnbGroup {
+        height: $sub-menu-height;
+        ul ul {
+            opacity: 1;
+        }
+    }
+    .gnbList{
+        gap:4rem;
+    }
+    .gnbLink {
+        color:#222
+    }
+}
+
+:global(.home){
+    .hamburger {
+        span {
+            background: #fff;
+        }
+    }
+
+    .gnbLink {
+        color:#fff;
+    }
+    :global(.up),
+    :global(.showGnb) {
+        .gnbLink {
+            color:#222;
+        }
+        .hamburger {
+            span {
+                background: #222;
+            }
+        }
+    }
+   
+}
+
+.aside {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 100%;
+    height: 100vh;
+    background-color: #fff;
+    z-index: 100;
+    transition: right 0.3s ease-in-out;
+    overflow-y: auto;
+
+    &.open {
+        right: 0;
+    }
+}
+
