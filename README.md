@@ -21,3 +21,5 @@
 - <a href="https://nextjs-starters-pearl.vercel.app/" target="_blank">nextjs-starters(바이브코딩)</a>
 - <a href="https://nextjs-step-ruddy.vercel.app/" target="_blank">nextjs-step</a>
 
+** 새창열기는 ctrl + 링크클릭 **
+
