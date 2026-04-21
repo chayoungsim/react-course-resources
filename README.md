@@ -9,10 +9,15 @@
 ### 학습 로드맵
 1. 기초 원리 파악 → TypeScript/Next.js 전환 → AI 코드 리뷰 능력 확보
 2. 동영상 강의 시청
-[React 강의](https://www.udemy.com/course/best-react/)
-[Typescript 강의](https://www.udemy.com/course/best-typescript/)
+ - [React, Next.js 강의](https://www.udemy.com/course/best-react/)
+ - [Typescript 강의](https://www.udemy.com/course/best-typescript-21/)
 3. 주 단위 학습 목표를 설정하고 Notion에 학습 로그 기록
-[학습 로그 (TIL: Today I Learned)](https://www.notion.so/3125e1c78ca080f5977cc68841da0745?v=3125e1c78ca0800da79c000c0fcc7fec)
+ - [학습 로그 (TIL: Today I Learned)](https://www.notion.so/3125e1c78ca080f5977cc68841da0745?v=3125e1c78ca0800da79c000c0fcc7fec)
 4. 작업 소스는 Git에 업데이트
-5. React, Next.js 프로젝트 생성하기
+5. React, Next.js 프로젝트 만들기
+ - [react-rawg-clone] (https://react-rawg-clone-virid.vercel.app/)
+ - [react-pinterest-clone] (https://react-pinterest-clone.vercel.app/)
+ - [react-tmdb-close] (https://react-tmdb-clone.vercel.app/)
+ - [nextjs-starters(바이브코딩)](https://nextjs-starters-pearl.vercel.app/)
+ - [nextjs-step](https://nextjs-step-ruddy.vercel.app/)
 
