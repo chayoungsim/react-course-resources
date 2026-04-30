@@ -16,6 +16,7 @@
 - <a href="https://www.notion.so/3125e1c78ca080f5977cc68841da0745?v=3125e1c78ca0800da79c000c0fcc7fec" target="_blank">[학습 로그 (TIL: Today I Learned)]</a>
 4. 작업 소스는 Git에 업데이트
 5. React, Next.js 프로젝트 만들기
+- <a href="https://clone-medium-flax.vercel.app/" target="_blank">clone-medium</a>
 - <a href="https://clone-stories-hanwag-com.vercel.app/" target="_blank">clone-stories-hanwag</a>
 - <a href="https://react-rawg-clone-virid.vercel.app/" target="_blank">react-rawg-clone</a>
 - <a href="https://react-pinterest-clone.vercel.app/" target="_blank">react-pinterest-clone</a>

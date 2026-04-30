@@ -1,0 +1,76 @@
+.btn-primary {
+    display: inline-flex;
+    align-items: center;
+    padding: 6px 14px;
+    border-radius: 16px;
+    border: 2px solid rgba(255, 255, 255, 0);
+    background: #e60023;
+    color: #ffffff;
+    font-size: 12px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: opacity 0.15s;
+    text-decoration: none;
+}
+
+.btn-primary.lg {
+    font-size: 16px;
+    padding: 10px 24px;
+}
+
+.btn-primary:hover {
+    opacity: 0.88;
+}
+
+.btn-primary:focus-visible {
+    outline: 2px solid #435ee5;
+    outline-offset: 2px;
+}
+
+.btn-secondary {
+    display: inline-flex;
+    align-items: center;
+    padding: 6px 14px;
+    border-radius: 16px;
+    border: 2px solid rgba(255, 255, 255, 0);
+    background: #e5e5e0;
+    color: #000000;
+    font-size: 12px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background 0.15s;
+    text-decoration: none;
+}
+
+.btn-secondary.lg {
+    font-size: 16px;
+    padding: 10px 24px;
+}
+
+.btn-secondary:hover {
+    background: #d0d0c8;
+}
+
+.btn-secondary:focus-visible {
+    outline: 2px solid #435ee5;
+    outline-offset: 2px;
+}
+
+textarea,
+.form-control {
+    border: 1px solid #91918c;
+    border-radius: 16px;
+    padding: 11px 15px;
+    font-family: inherit;
+    font-size: 16px;
+    color: #211922;
+    background: #ffffff;
+    transition: border-color 0.15s;
+}
+
+textarea:focus,
+.form-control:focus {
+    outline: 2px solid #435ee5;
+    outline-offset: 0;
+    border-color: #435ee5;
+}
