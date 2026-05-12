@@ -1,0 +1,235 @@
+{
+  "transactions": [
+    {
+      "id": "1",
+      "type": "income",
+      "category": "salary",
+      "amount": 3500000,
+      "description": "3월 급여",
+      "date": "2026-03-05",
+      "createdAt": "2026-03-05T09:00:00.000Z",
+      "updatedAt": "2026-03-05T09:00:00.000Z"
+    },
+    {
+      "id": "2",
+      "type": "expense",
+      "category": "housing",
+      "amount": 700000,
+      "description": "3월 월세",
+      "date": "2026-03-05",
+      "createdAt": "2026-03-05T10:00:00.000Z",
+      "updatedAt": "2026-03-05T10:00:00.000Z"
+    },
+    {
+      "id": "3",
+      "type": "expense",
+      "category": "food",
+      "amount": 38000,
+      "description": "마트 장보기",
+      "date": "2026-03-08",
+      "createdAt": "2026-03-08T14:00:00.000Z",
+      "updatedAt": "2026-03-08T14:00:00.000Z"
+    },
+    {
+      "id": "4",
+      "type": "expense",
+      "category": "transport",
+      "amount": 55000,
+      "description": "3월 교통카드 충전",
+      "date": "2026-03-10",
+      "createdAt": "2026-03-10T08:00:00.000Z",
+      "updatedAt": "2026-03-10T08:00:00.000Z"
+    },
+    {
+      "id": "5",
+      "type": "income",
+      "category": "freelance",
+      "amount": 450000,
+      "description": "웹사이트 외주 작업",
+      "date": "2026-03-15",
+      "createdAt": "2026-03-15T15:00:00.000Z",
+      "updatedAt": "2026-03-15T15:00:00.000Z"
+    },
+    {
+      "id": "6",
+      "type": "expense",
+      "category": "food",
+      "amount": 24000,
+      "description": "친구와 점심",
+      "date": "2026-03-18",
+      "createdAt": "2026-03-18T12:00:00.000Z",
+      "updatedAt": "2026-03-18T12:00:00.000Z"
+    },
+    {
+      "id": "7",
+      "type": "expense",
+      "category": "entertainment",
+      "amount": 15000,
+      "description": "넷플릭스 구독",
+      "date": "2026-03-20",
+      "createdAt": "2026-03-20T09:00:00.000Z",
+      "updatedAt": "2026-03-20T09:00:00.000Z"
+    },
+    {
+      "id": "8",
+      "type": "income",
+      "category": "salary",
+      "amount": 3500000,
+      "description": "4월 급여",
+      "date": "2026-04-05",
+      "createdAt": "2026-04-05T09:00:00.000Z",
+      "updatedAt": "2026-04-05T09:00:00.000Z"
+    },
+    {
+      "id": "9",
+      "type": "expense",
+      "category": "housing",
+      "amount": 700000,
+      "description": "4월 월세",
+      "date": "2026-04-05",
+      "createdAt": "2026-04-05T10:00:00.000Z",
+      "updatedAt": "2026-04-05T10:00:00.000Z"
+    },
+    {
+      "id": "10",
+      "type": "expense",
+      "category": "shopping",
+      "amount": 89000,
+      "description": "봄 옷 구매",
+      "date": "2026-04-08",
+      "createdAt": "2026-04-08T16:00:00.000Z",
+      "updatedAt": "2026-04-08T16:00:00.000Z"
+    },
+    {
+      "id": "11",
+      "type": "expense",
+      "category": "health",
+      "amount": 32000,
+      "description": "헬스장 회원권",
+      "date": "2026-04-10",
+      "createdAt": "2026-04-10T10:00:00.000Z",
+      "updatedAt": "2026-04-10T10:00:00.000Z"
+    },
+    {
+      "id": "12",
+      "type": "income",
+      "category": "investment",
+      "amount": 120000,
+      "description": "주식 배당금",
+      "date": "2026-04-15",
+      "createdAt": "2026-04-15T11:00:00.000Z",
+      "updatedAt": "2026-04-15T11:00:00.000Z"
+    },
+    {
+      "id": "13",
+      "type": "expense",
+      "category": "education",
+      "amount": 99000,
+      "description": "온라인 강의 수강료",
+      "date": "2026-04-18",
+      "createdAt": "2026-04-18T14:00:00.000Z",
+      "updatedAt": "2026-04-18T14:00:00.000Z"
+    },
+    {
+      "id": "14",
+      "type": "expense",
+      "category": "food",
+      "amount": 52000,
+      "description": "가족 외식",
+      "date": "2026-04-25",
+      "createdAt": "2026-04-25T18:00:00.000Z",
+      "updatedAt": "2026-04-25T18:00:00.000Z"
+    },
+    {
+      "id": "15",
+      "type": "income",
+      "category": "salary",
+      "amount": 3500000,
+      "description": "5월 급여",
+      "date": "2026-05-05",
+      "createdAt": "2026-05-05T09:00:00.000Z",
+      "updatedAt": "2026-05-05T09:00:00.000Z"
+    },
+    {
+      "id": "16",
+      "type": "expense",
+      "category": "housing",
+      "amount": 700000,
+      "description": "5월 월세",
+      "date": "2026-05-05",
+      "createdAt": "2026-05-05T10:00:00.000Z",
+      "updatedAt": "2026-05-05T10:00:00.000Z"
+    },
+    {
+      "id": "17",
+      "type": "expense",
+      "category": "food",
+      "amount": 18500,
+      "description": "편의점 저녁",
+      "date": "2026-05-06",
+      "createdAt": "2026-05-06T20:00:00.000Z",
+      "updatedAt": "2026-05-06T20:00:00.000Z"
+    },
+    {
+      "id": "18",
+      "type": "expense",
+      "category": "transport",
+      "amount": 45000,
+      "description": "5월 교통카드 충전",
+      "date": "2026-05-07",
+      "createdAt": "2026-05-07T08:00:00.000Z",
+      "updatedAt": "2026-05-07T08:00:00.000Z"
+    },
+    {
+      "id": "19",
+      "type": "income",
+      "category": "freelance",
+      "amount": 280000,
+      "description": "로고 디자인 외주",
+      "date": "2026-05-07",
+      "createdAt": "2026-05-07T13:00:00.000Z",
+      "updatedAt": "2026-05-07T13:00:00.000Z"
+    },
+    {
+      "id": "20",
+      "type": "expense",
+      "category": "health",
+      "amount": 15000,
+      "description": "약국",
+      "date": "2026-05-07",
+      "createdAt": "2026-05-07T17:00:00.000Z",
+      "updatedAt": "2026-05-07T17:00:00.000Z"
+    },
+    {
+      "type": "income",
+      "category": "investment",
+      "amount": 1000000,
+      "description": "투자이익",
+      "date": "2026-05-01",
+      "createdAt": "2026-05-07T08:51:51.501Z",
+      "updatedAt": "2026-05-07T08:51:51.501Z",
+      "id": "CNMa4syD1iI"
+    },
+    {
+      "type": "income",
+      "category": "investment",
+      "amount": 10000000,
+      "description": "투자수익",
+      "date": "2026-05-01",
+      "createdAt": "2026-05-08T01:36:38.647Z",
+      "updatedAt": "2026-05-08T01:36:38.647Z",
+      "id": "WmOzPXYuH30"
+    },
+    {
+      "type": "expense",
+      "category": "food",
+      "amount": 10000,
+      "description": "점심",
+      "date": "2026-05-08",
+      "createdAt": "2026-05-08T02:14:21.809Z",
+      "updatedAt": "2026-05-08T02:14:21.809Z",
+      "id": "pKn7uKtOl9U"
+    }
+  ],
+  "$schema": "./node_modules/json-server/schema.json"
+}
