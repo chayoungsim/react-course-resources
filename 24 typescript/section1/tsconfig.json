@@ -1,0 +1,12 @@
+{   
+    "compilerOptions": {
+        "skipLibCheck": true,
+        "rootDir": "./src",
+        "target": "ESNext",
+        "module": "ESNext",
+        "outDir": "dist",
+        "strict": true,
+        "moduleDetection": "force" //모든파일을 개별 모듈로 처리
+    },
+    "include" :["src"]
+}
